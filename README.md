@@ -9,7 +9,6 @@ This project was developed as part of the CS50's Web Programming with Python and
 
 ## 📌 Features
 
-- ✅ User registration and login
 - 📝 Create, edit, and delete tasks
 - 📅 Interface by date (e.g., tasks for April 29th)
 - 🌐 Friendly user interface with HTML and CSS
