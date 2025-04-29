@@ -3,7 +3,7 @@
 This project was developed as part of the CS50's Web Programming with Python and JavaScript course by Harvard University. It served as an exercise to apply concepts learned throughout the course, such as web development with Django, deploying applications, and integrating with cloud services like Render.
 
 
-🔗 Access it here: [https://havard-project.onrender.com](https://havard-project.onrender.com)
+🔗 Access it here: [https://havard-project.onrender.com](https://havard-project.onrender.com)/ana
 
 ---
 
