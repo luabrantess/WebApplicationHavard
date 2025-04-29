@@ -32,5 +32,4 @@ This project was developed as part of the CS50's Web Programming with Python and
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/luabrantess/havard-project
