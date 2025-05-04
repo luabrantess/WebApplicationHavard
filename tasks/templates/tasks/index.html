@@ -114,7 +114,9 @@
     </div>
 
     <ul id="task-list">
-    
+      {% for task in tasks %}
+        <li>{{ task }}</li>
+      {% endfor %}
     </ul>
   </div>
 
