@@ -108,10 +108,11 @@
     {% else %}
       <h1>✨ {{ name }}, To-Do list for {{ month}} {{ day}}, {{ year }}</h1>
     {% endif %}
-    <div id="new-task">
-      <input type="text" id="task-input" placeholder="Nova tarefa...">
-      <button onclick="addTask()">Adicionar</button>
-    </div>
+    <form id="new-task" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button  <!--onclick="addTask()"--> ">Adicionar</button>
+    </form>
 
     <ul id="task-list">
       {% for task in tasks %}
