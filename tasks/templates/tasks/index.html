@@ -111,7 +111,7 @@
     <form id="new-task" method="post">
       {% csrf_token %}
       {{ form }}
-      <button  <!--onclick="addTask()"--> ">Adicionar</button>
+      <button type="submit">Adicionar</button>
     </form>
 
     <ul id="task-list">
