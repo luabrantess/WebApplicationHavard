@@ -4,7 +4,6 @@ from django import forms
 from django.http import HttpResponse
 from django.shortcuts import render
 
-tasks = []
 
 class NewTask(forms.Form):
     task = forms.CharField(label="New task")
@@ -12,11 +11,14 @@ class NewTask(forms.Form):
 def index(request, name):
     now = datetime.datetime.now()
 
+    if "tasks" not in request.session:
+        request.session["tasks"] = []
+
     if request.method == "POST":
         form = NewTask(request.POST)
         if form.is_valid():
             task = form.cleaned_data["task"]
-            tasks.append(task)
+            request.session["tasks"] += [task]
         else:
             return render(request, "tasks/index.html", {
                 "form": form
@@ -28,7 +30,7 @@ def index(request, name):
         "month": now.strftime("%B"),
         "year": now.year,
         "form": NewTask(),
-        "tasks": tasks
+        "tasks": request.session["tasks"]
 
     })
 
