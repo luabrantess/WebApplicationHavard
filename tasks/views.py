@@ -3,6 +3,7 @@ import datetime
 from django import forms
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Tasks
 
 
 class NewTask(forms.Form):
@@ -30,8 +31,10 @@ def index(request, name):
         "month": now.strftime("%B"),
         "year": now.year,
         "form": NewTask(),
-        "tasks": request.session["tasks"]
+        "tasks": Tasks.objects.all()
 
     })
 
-
+def task(request, tasks_id):
+    task = Tasks.objects.get(id=tasks_id)
+    return render(request, "tasks/task.html")

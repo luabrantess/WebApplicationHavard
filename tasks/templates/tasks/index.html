@@ -130,7 +130,7 @@
       {% for task in tasks %}
         <li>
           <input type="checkbox" id="task{{ forloop.counter }}">
-          <span>{{ task }}</span>
+          <span>{{ task.task }}</span>
         </li>
       {% empty %}
         <li><span>Nenhuma tarefa ainda.</span></li>
